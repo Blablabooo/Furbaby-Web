@@ -11,7 +11,10 @@ body {
     font-size: 0.88rem;
     background: #fff;
     user-select: none;
-    overflow-x: hidden;    
+    overflow-x: hidden;  
+    background-image: url(file:///C:/Users/MASTER/Downloads/background2.webp);  
+    background-size: cover;
+    background-position: center;
 }
 .container {
     display: grid;
@@ -86,6 +89,7 @@ aside .top{
 aside .logo {
     display: flex;
     gap: 0.8rem;
+    color: #61485e;
 }
 aside .logo img{
     width: 3rem;
@@ -171,4 +175,63 @@ aside .sidebar a:hover i{
     border-radius: 50%;
     overflow-x: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+main {
+    margin-top: 1.7rem;
+}
+main .search {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 1.6rem;
+    width: 25vw;
+    height: 55px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #E06047;
+    position: absolute;
+    left: 18%;
+}
+.main .search i {
+    font-size: 20px;
+}
+main .search input[type="search"]{
+    color: #61485e;
+    background: transparent;
+    width: 100%;
+}
+main .search input[type="search"]::placeholder{
+    color: #797979;
+}
+main .header {
+    display: block;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 50px;
+    color: #61485e;
+}
+main .datetime {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 5px 1.6rem;
+    color: #61485e;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-left: 400px;
+    width: 370px;
+    height: 55px;
+}
+
+main .date-time {
+    display: flex;
+    gap: 2rem;
+}
+
+main .date,
+main .time {
+    text-align: center;
 }
