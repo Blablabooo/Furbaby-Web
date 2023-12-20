@@ -5,10 +5,9 @@
     box-sizing: border-box;
     font-family: 'Prompt', sans-serif;
 }
-
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-size: 0.88rem;
     background: #fff;
     user-select: none;
@@ -17,35 +16,30 @@ body {
     background-size: cover;
     background-position: center;
 }
-
 .container {
     display: grid;
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 5.25rem;
+    grid-template-columns: 14rem auto 4rem;
 }
-
 a {
     color: #61485e;
 }
-
 img {
     display: block;
     width: 100%;
 }
-
-.img1 {
-    display: block;
-    width: 20%;
-}
 h1 {
+    color: #CCCCCC;
     font-weight: 800;
     font-size: 2rem;
 }
+
 h2 {
     font-size: 1.8rem;
 }
+
 h3 {
     font-size: 1rem;
 }
@@ -53,54 +47,40 @@ h3 {
 h4 {
     font-size: 0.8rem;
 }
-h5 {
-    font-size: 1rem;
-    color: #ffffff;
-}
-
 small {
     font-size: 0.75rem;
 }
-
 .profile_photo {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     overflow-x: hidden;
 }
-
 .text_muted {
     color: #797979;
 }
-
 p {
     color: #61485e;
+    font-size: 1.1rem;
 }
-
 b {
     color: black;
 }
-
 .primary {
     color: #61485e;
 }
-
 .danger {
     color: #D42866;
 }
-
 .success {
     color: #FAE0E1;
 }
-
 .warning {
     color: #E06047;
 }
-
 aside {
     height: 100%;
 }
-
 aside .top {
     background: #fff;
     display: flex;
@@ -108,13 +88,11 @@ aside .top {
     justify-content: space-between;
     margin-top: 1.4rem;
 }
-
 aside .logo {
     display: flex;
     gap: 0.8rem;
     color: #61485e;
 }
-
 aside .logo img {
     width: 3rem;
     height: 3rem;
@@ -176,6 +154,7 @@ aside .sidebar a.active i {
 aside .sidebar a.logout {
     color: #797979;
 }
+
 aside .sidebar a:hover i {
     margin-left: 1rem;
 }
@@ -183,21 +162,35 @@ aside .sidebar a:hover i {
 .right {
     margin-top: 1.4rem;
 }
-.right .profile {
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .top .profile {
     display: flex;
     gap: 2rem;
     text-align: right;
 }
-.right .profile_photo {
+
+.right .top .profile_photo {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     overflow-x: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 main {
     margin-top: 1.7rem;
 }
+
 main .search {
     background: #fff;
     border: 1px solid #ddd;
@@ -228,6 +221,7 @@ main .search input[type="search"]{
 main .search input[type="search"]::placeholder{
     color: #797979;
 }
+
 main .header {
     display: block;
     align-items: center;
@@ -260,161 +254,39 @@ main .date,
 main .time {
     text-align: center;
 }
-.details {
-    display: flex;
-    margin-top: 20px;
-}
-.box1 {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 50px;
-    background-color: #ffffff;
-    margin: 10px;
-    width: 650px;
-    height: 400px;
+.pet img {
+    width: 400px;
+    height: auto;
+    display: block;
     position: relative;
-    left: 10px;
-    display: flex;
-    color: #61485e;
-}
-.box1 h3 {
-    color: #797979;
-    font-weight: 500;
-}
-.box1 p{
-    margin-top: 10px;
-    font-weight: 500;
-}
-.profile_owner {
-    width: 200px;
-    /* Set the width to your desired value */
-    height: 200px;
-    margin-left: 70px;
-    border-radius: 50%;
-    overflow-x: hidden;
-    font-size: 25px;
-    line-height: 60px;
-    border-radius: 50;
-    text-align: center;
-    margin-right: 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.profile_owner img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-.box1-left,
-.box1-right {
-    flex-basis: 50%;
-    /* Divide the content into two equal halves */
-}
-.box1-left {
-    padding-left: 0;
-    border-right: 2px solid #ddd;
-    text-align: center;
-}
-.box1-right {
-    padding-left: 20px;
-    margin-top: 10px;
-}
-.btn {
-    display: inline-block;
-    padding: 7px 26px;
-    background-color: #E06047;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 40px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-left: 15px;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-.box2 {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 50px;
-    background-color: #ffffff;
-    width: 300px;
-    height: 400px;
-    position: relative;
-    left: 40px;
-    top: 10px;
-    color: #61485e;
-}
-.box2 h3 {
-    font-weight: 500;
-    text-align: center;
-}
-.box2-1 {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 30px;
-    background-color: #f9f2f3;
-    margin: 10px;
-    width: 225px;
-    height: 150px;
-    position: relative;
-    margin-right: 20px;
-}
-.box2-2 {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 30px;
-    background-color: #f9f2f3;
-    margin: 10px;
-    width: 225px;
-    height: 150px;
-    position: relative;
-}
-.pet_photo {
-    width: 90px;
-    height: 90px;
-}
-.box2-1 .pet_photo,
-.box2-2 .pet_photo {
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-.box3 {
-    border: 2px solid #ddd;
-    padding-left: 20px;
-    padding-top: 10px;
+.box {
+    width: 90%; 
+    height: 90%; 
+    background: white; 
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
     border-radius: 30px;
-    background-color: #ffffff;
-    margin-left: 120px;
-    width: 800px;
-    height: 250px;
-    position: relative;
-    top: 10px;
+    margin: 0 auto;
+    padding: 25px;
+}
+.box h1{
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #CCCCCC;
+}
+.box h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #CCCCCC;
+    margin: 10px 0;
+}
+.box p{
+    font-weight: 500;
     color: #61485e;
+    margin: 0 10px;
 }
-.diagnoses input[type="text"] {
-    background-color: #fff;
-    border: none;
-    padding: 10px;
-    width: 90%;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-.box3 .btn {
-    display: inline-block;
-    padding: 3px 20px;
-    background-color: #E06047;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-left: 300px;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+.box .details, .box .topic {
+    display: flex;
+    justify-content: space-between;
 }

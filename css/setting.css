@@ -6,15 +6,15 @@
     font-family: 'Prompt', sans-serif;
 }
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-size: 0.88rem;
     background: #fff;
     user-select: none;
     overflow-x: hidden;  
     background-image: url(file:///C:/Users/MASTER/Downloads/background2.webp);  
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 .container {
     display: grid;
@@ -77,7 +77,7 @@ b {
     color: #E06047;
 }
 aside {
-    height: 10vh;
+    height: 100%;
 }
 aside .top{
     background: #fff;
@@ -118,37 +118,29 @@ aside .sidebar a {
     height: 3.7rem;
     transition: all 300ms ease;
 }
-
 aside .sidebar a:hover {
     color: #D42866;
 }
-
 aside .sidebar a:hover i {
     margin-left: 1rem;
 }
-
 aside .sidebar a.active {
     background: #FAE0E1;
     color: #D42866;
     margin-left: 0;
 }
-
 aside .sidebar a.active:before {
     content: '';
     width: 6px;
     height: 100%;
     background: #D42866;
 }
-
 aside .sidebar a.active i {
     color: #D42866;
     margin-left: calc(1rem - 3px);
 }
 aside .sidebar a.logout {
-    margin-top: auto;
-}
-aside .sidebar a.logout {
-    margin-top: auto;
+    color: #797979;
 }
 aside .sidebar a:hover i{
     margin-left: 1rem;
@@ -156,20 +148,12 @@ aside .sidebar a:hover i{
 .right {
     margin-top: 1.4rem;
 }
-.right .top{
-    display: flex;
-    justify-content: end;
-    gap: 2rem;
-}
-.right .top button {
-    display: none;
-}
-.right .top .profile {
+.right .profile {
     display: flex;
     gap: 2rem;
     text-align: right;
 }
-.right .top .profile_photo {
+.right .profile_photo {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
@@ -200,6 +184,11 @@ main .search input[type="search"]{
     color: #61485e;
     background: transparent;
     width: 100%;
+    padding: 10px;
+    margin-bottom: 3px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
 }
 main .search input[type="search"]::placeholder{
     color: #797979;
@@ -222,16 +211,68 @@ main .datetime {
     border-radius: 50px;
     font-weight: 500;
     margin-left: 400px;
-    width: 370px;
+    width: 400px;
     height: 55px;
 }
-
 main .date-time {
     display: flex;
     gap: 2rem;
 }
-
 main .date,
 main .time {
     text-align: center;
+}
+main .header {
+    text-align: center;
+}
+.container set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.settings {
+    width: 1000px;
+    padding: 5px;
+    color: #61485e;
+}
+.section {
+    margin-bottom: 20px;
+}
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    margin-right: 100px;
+    color: #797979;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 50px;
+    white-space: nowrap;
+}
+input,
+select,
+textarea {
+    width: 80%;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #fdd6d6ac;
+    border-radius: 4px;
+}
+button {
+    background-color: #61485e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #db5a89;
 }

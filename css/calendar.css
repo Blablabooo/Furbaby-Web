@@ -21,7 +21,7 @@ body {
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 14rem;
+    grid-template-columns: 14rem auto 4rem;
 }
 a {
     color: #61485e;
@@ -77,7 +77,7 @@ b {
     color: #E06047;
 }
 aside {
-    height: 10vh;
+    height: 100%;
 }
 aside .top{
     background: #fff;
@@ -104,6 +104,7 @@ aside .sidebar{
     height: 86vh;
     position: relative;
     top: 3rem;
+    flex-grow: 1;
 }
 aside h3{
     font-weight: 500;
@@ -145,64 +146,58 @@ aside .sidebar a.active i {
     margin-left: calc(1rem - 3px);
 }
 aside .sidebar a.logout {
-    margin-top: auto;
-}
-aside .sidebar a.logout {
-    margin-top: auto;
+  color: #797979;
 }
 aside .sidebar a:hover i{
     margin-left: 1rem;
 }
 .right {
-    margin-top: 1.4rem;
+  margin-top: 1.4rem;
 }
-.right .top{
-    display: flex;
-    justify-content: end;
-    gap: 2rem;
+.right .profile {
+  display: flex;
+  gap: 2rem;
+  text-align: right;
 }
-.right .top button {
-    display: none;
-}
-.right .top .profile {
-    display: flex;
-    gap: 2rem;
-    text-align: right;
-}
-.right .top .profile_photo {
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    overflow-x: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.right .profile_photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow-x: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 main {
     margin-top: 1.7rem;
 }
 main .search {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 8px 1.6rem;
-    width: 25vw;
-    height: 55px;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: #E06047;
-    position: absolute;
-    left: 18%;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 1.6rem;
+  width: 25vw;
+  height: 55px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #E06047;
+  position: absolute;
+  left: 18%;
 }
 .main .search i {
-    font-size: 20px;
+  font-size: 20px;
 }
 main .search input[type="search"]{
-    color: #61485e;
-    background: transparent;
-    width: 100%;
+  color: #61485e;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
 }
 main .search input[type="search"]::placeholder{
-    color: #797979;
+  color: #797979;
 }
 main .header {
     display: block;
@@ -222,7 +217,7 @@ main .datetime {
     border-radius: 50px;
     font-weight: 500;
     margin-left: 400px;
-    width: 370px;
+    width: 400px;
     height: 55px;
 }
 main .date-time {
@@ -239,12 +234,11 @@ main .time {
     min-height: 850px;
     margin: 0 auto;
     padding: 5px;
-    color: #878895;
+    color: #373c4f;
     display: flex;
     border-radius: 10px;
-    background-color: #fac9d0;
+    background-color: #fad9e5;
 }
-
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -270,7 +264,7 @@ main .time {
     justify-content: space-between;
     color: #61485e;
     border-radius: 5px;
-    background-color: #fbfdff;
+    background-color: #ffffff;
   }
   /* set after behind the main element */
   .calendar::before,
@@ -282,13 +276,13 @@ main .time {
     width: 12px;
     height: 97%;
     border-radius: 0 5px 5px 0;
-    background-color: #d3d4d6d7;
+    background-color:#ffc2d9;
     transform: translateY(-50%);
   }
   .calendar::before {
     height: 94%;
     left: calc(100% + 12px);
-    background-color: rgb(153, 153, 153);
+    background-color: #fc85b1;
   }
   .calendar .month {
     width: 100%;
@@ -483,7 +477,7 @@ main .time {
   .right .today-date .event-date {
     font-size: 1rem;
     font-weight: 400;
-    color: #878895;
+    color: #373c4f;
   }
   .events {
     width: 100%;
@@ -590,9 +584,9 @@ main .time {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #878895;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #373c4f;
   }
   .add-event-wrapper {
     position: absolute;
